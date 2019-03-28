@@ -62,4 +62,5 @@ for backbone in backbones:
             switch.setClients(clients)
             for clientmac in clients:
                 print(clientmac.mac)
+                print("TEST")
 
