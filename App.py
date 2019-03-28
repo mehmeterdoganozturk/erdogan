@@ -41,7 +41,7 @@ for backbone in backbones:
             mac2 = hex(int(a[15])).split('x')[-1]
             mac3 = hex(int(a[16])).split('x')[-1]
             mac4 = hex(int(a[17])).split('x')[-1]
-            mac5 = hex(int(a[18])).split('x')[-1]
+            mac5 = hex(i nt(a[18])).split('x')[-1]
             mac6 = hex(int(a[19].split(' ')[0])).split('x')[-1]
             if(len(mac1)<2):
                 mac1 = '0'+mac1
