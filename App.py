@@ -22,9 +22,10 @@ if(len(records) > 0):
         eachline = stmt.splitlines()
         for i in eachline:
             a = (i.split('.'))
-            switch = Switch(a[11] + "." + a[12] + "." + a[13] + "." + a[14].split(' ')[0])
-            switches.append(switch)
-            backbone.setswitches(switches)
+            if(a[14].split(' ')[0] != '1'):
+                switch = Switch(a[11] + "." + a[12] + "." + a[13] + "." + a[14].split(' ')[0])
+                switches.append(switch)
+                backbone.setswitches(switches)
 
 for backbone in backbones:
     print(backbone.id)
@@ -37,10 +38,15 @@ for backbone in backbones:
         print("SwitchIp:"+switchsingle.ip)
         for i in eachline:
             clients = []
-            mac = Helper.decimaltohex(i)
-            client = Client(mac)
+            #maci convert et ve vlan çek
+            rtr = Helper.decimaltohex(i)
+            mac = rtr[0]
+            vlan = str(rtr[1])
+            #port string olarak bul
+            port = Helper.findport(i,switchsingle.ip,SnmpProtocol)
+            client = Client(mac,port,vlan)
             clients.append(client)
             switch.setClients(clients)
-            for clientmac in clients:
-                print(clientmac.mac)
+            for client in clients:
+                print("Mac: "+client.mac + " Port: "+client.port+ " Vlan: "+client.vlan)
 
