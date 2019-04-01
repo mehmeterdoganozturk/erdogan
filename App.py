@@ -3,6 +3,7 @@ from QueryExecuter import querytrigger
 from Backbone import Backbone
 from Switch import Switch
 from Client import Client
+from Helper import Helper
 
 dbclass = querytrigger()
 
@@ -16,6 +17,7 @@ if(len(records) > 0):
         switches = []
         backbone = Backbone(str(record[0]), record[1], record[2], record[3])
         backbones.append(backbone)
+        #28 vlan switch vlanı
         stmt = SnmpProtocol.execute(backbone.ip, '1.3.6.1.2.1.4.22.1.1', '"INTEGER: 28"')
         eachline = stmt.splitlines()
         for i in eachline:
@@ -35,29 +37,8 @@ for backbone in backbones:
         print("SwitchIp:"+switchsingle.ip)
         for i in eachline:
             clients = []
-            #mac decimal to hexa-START
-            a = (i.split('.'))
-            mac1 = hex(int(a[14])).split('x')[-1]
-            mac2 = hex(int(a[15])).split('x')[-1]
-            mac3 = hex(int(a[16])).split('x')[-1]
-            mac4 = hex(int(a[17])).split('x')[-1]
-            mac5 = hex(int(a[18])).split('x')[-1]
-            mac6 = hex(int(a[19].split(' ')[0])).split('x')[-1]
-            if(len(mac1)<2):
-                mac1 = '0'+mac1
-            if (len(mac2) < 2):
-                mac2 = '0' + mac2
-            if (len(mac3) < 2):
-                mac3 = '0' + mac3
-            if (len(mac4) < 2):
-                mac4 = '0' + mac4
-            if (len(mac5) < 2):
-                mac5 = '0' + mac5
-            if (len(mac6) < 2):
-                mac6 = '0' + mac6
-            # mac decimal to hexa-END
-
-            client = Client(mac1+':'+mac2+':'+mac3+':'+mac4+':'+mac5+':'+mac6)
+            mac = Helper.decimaltohex(i)
+            client = Client(mac)
             clients.append(client)
             switch.setClients(clients)
             for clientmac in clients:
