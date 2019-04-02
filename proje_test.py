@@ -1,4 +1,4 @@
-from kutuphane import *
+ from kutuphane import *
 print("""
 ******************************
 işlemler:
