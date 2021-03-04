@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4e0f1764-780a-4e04-8c23-0799f1199767" name="Default Changelist" comment="vlan eklendi&#10;port eklendi&#10;Client objesine yeni parametreler eklendi&#10;deneme">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backbone.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backbone.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Switch.py" beforeDir="false" afterPath="$PROJECT_DIR$/Switch.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,10 +69,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../jgjg" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -137,7 +136,7 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>$USER_HOME$/.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -147,7 +146,9 @@
       <option name="presentableId" value="Default" />
       <updated>1553783066416</updated>
       <workItem from="1612182335593" duration="1040000" />
-      <workItem from="1612255727873" duration="135000" />
+      <workItem from="1612255727873" duration="226000" />
+      <workItem from="1612380726722" duration="12000" />
+      <workItem from="1614892007077" duration="157000" />
     </task>
     <task id="LOCAL-00001" summary="print TEST">
       <created>1553783164573</created>
@@ -191,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612182431006</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="vlan eklendi&#10;port eklendi&#10;Client objesine yeni parametreler eklendi&#10;deneme">
+      <created>1612255894107</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1612255894107</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
