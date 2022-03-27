@@ -5,6 +5,8 @@ from Switch import Switch
 from Client import Client
 from Helper import Helper
 
+print ("AAAABBBB")
+
 dbclass = querytrigger()
 
 sql = "SELECT backbone.id as id, backbone.ip as ip, bina.ad as binaad,bina.id as binaid FROM backbone INNER JOIN bina ON (backbone.binaid = bina.id) WHERE backbone.switchkontrol = 1 ORDER BY backbone.id ASC"
